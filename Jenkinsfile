@@ -15,7 +15,7 @@ pipeline {
             steps {
                bat "docker build -t shubhadad/hello ."
 		bat "docker run shubhadad/hello"
-		bat "docker push shubhadad/hello"
+		bat "docker image push shubhadad/hello"
             }
         }
 	
