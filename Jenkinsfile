@@ -13,9 +13,9 @@ pipeline {
         }
 	 stage('Build Docker image') {
             steps {
-               bat "docker build -t shubhadad/hello ."
-		bat "docker run shubhadad/hello"
-		bat "docker image push shubhadad/hello"
+               bat "docker build -t shubhadad/helloworld ."
+		bat "docker run shubhadad/helloworld"
+		bat "docker image push shubhadad/helloworld"
             }
         }
 	
