@@ -2,7 +2,7 @@ pipeline {
 
 	    environment { 
 
-        registry = "hub.docker.com/repository/docker/shubhadad/hello_world1" 
+        registry = "https://hub.docker.com/shubhadad/hello_world1" 
 
         registryCredential = 'dockerhub_id' 
 
