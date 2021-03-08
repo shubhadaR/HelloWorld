@@ -25,7 +25,7 @@ pipeline {
             steps {
              
 		script { 
-			dockerImage = docker.build -t shubhadad/helloworld
+			dockerImage = docker.build -t "shubhadad/helloworld"
                     docker.withRegistry( '', registryCredential ) { 
 
                         dockerImage.push() 
