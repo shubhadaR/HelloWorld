@@ -26,7 +26,7 @@ pipeline {
              
 		script { 
 			dockerImage = docker.build "shubhadad/hello_world1:$BUILD_NUMBER"
-                    docker.withRegistry( registry, registryCredential ) { 
+                    docker.withRegistry( '', registryCredential ) { 
 
                        dockerImage.push()
 
