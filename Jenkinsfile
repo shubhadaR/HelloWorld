@@ -41,6 +41,9 @@ pipeline {
 	stage('Run Image') {
             steps {
                 bat "docker run shubhadad/hello_world1:$BUILD_NUMBER"
+		bat "docker ps "
+		bat "docker ps -a"
+		
 		
             }
         }
