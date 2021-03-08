@@ -2,7 +2,7 @@ pipeline {
 
 	    environment { 
 
-        registry = "https://hub.docker.com/shubhadad/hello_world1" 
+        registry = "https://hub.docker.com" 
 
         registryCredential = 'dockerhub_id' 
 
@@ -25,8 +25,8 @@ pipeline {
             steps {
              
 		script { 
-			dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                    docker.withRegistry( '', registryCredential ) { 
+			dockerImage = docker.build "shubhadad/hello_world1:$BUILD_NUMBER"
+                    docker.withRegistry( registry, registryCredential ) { 
 
                        dockerImage.push()
 
