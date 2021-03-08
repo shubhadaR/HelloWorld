@@ -23,10 +23,9 @@ pipeline {
         }
 	 stage('Build Docker image') {
             steps {
-               bat "docker build -t shubhadad/helloworld ."
-		bat "docker run shubhadad/helloworld"
+             
 		script { 
-
+			dockerImage = docker.build registry + ":$BUILD_NUMBER"
                     docker.withRegistry( '', registryCredential ) { 
 
                         dockerImage.push() 
