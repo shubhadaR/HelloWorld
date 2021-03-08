@@ -28,10 +28,10 @@ pipeline {
 			dockerImage = docker.build registry + ":$BUILD_NUMBER"
                     docker.withRegistry( '', registryCredential ) { 
 
-                       
+                       dockerImage.push()
 
                     }
-		bat "docker image push dockerImage"
+		
 		}
        
         }
